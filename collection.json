@@ -1,0 +1,135 @@
+{
+  "info": {
+    "_postman_id": "173d1b80-3a61-4c48-bf06-69581a22e9b1",
+    "name": "DevBooks API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53759078",
+    "_collection_link": "https://go.postman.co/collection/53759078-173d1b80-3a61-4c48-bf06-69581a22e9b1?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "1 - Criar Autor",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Lygia Fagundes Telles\",\r\n  \"biography\": \"Escritora brasileira, conhecida por sua obra de contos e romances.\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/authors",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "authors"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2 - Criar Livro",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"As Meninas\",\r\n  \"release_year\": 1973,\r\n  \"author_id\": \"123da16b-122a-4f5f-b2cb-c699b6c03d4c\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/books",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "books"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3 - Listar Livros",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "books"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "4 - Atualizar Livro",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"As Meninas - Edição Especial\",\r\n  \"release_year\": 1973\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/books/428a0e2c-e007-4988-82d3-884349510c9b",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "books",
+            "428a0e2c-e007-4988-82d3-884349510c9b"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "5 - Excluir Livro",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/books/428a0e2c-e007-4988-82d3-884349510c9b",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "books",
+            "428a0e2c-e007-4988-82d3-884349510c9b"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
